@@ -321,6 +321,7 @@ header nav ul li a:hover {
   flex: 1;
 }
 
+
 .trainer-img {
   width: 100%;
   min-height: 300px;
@@ -343,6 +344,10 @@ header nav ul li a:hover {
   background-image: url("./01-05-trainers/trainer-3.jpg");
 }
 
+.trainer:hover .trainer-img::after {
+  opacity: 1;
+}
+
 .trainer-img::after {
   content: "";
   height: 100%;
@@ -351,7 +356,14 @@ header nav ul li a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+ top: 0px;
 }
 
 .trainer-img h3 {
